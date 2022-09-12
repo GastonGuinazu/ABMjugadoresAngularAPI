@@ -1,0 +1,8 @@
+<div class="container-fluid py-5 bg-success">
+    <div class="container text-white">
+        <h1 class="display-3">Lista de Jugadores</h1>
+    </div>
+</div>
+
+<app-jugador-list [jugadores]="jugadores" (createEvent)="create()" (editEvent)="edit($event)"
+ (deleteEvent)="delete($event)"></app-jugador-list>

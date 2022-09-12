@@ -1,0 +1,40 @@
+<app-header [title]="isEdit ? 'Editar Usuario' :'Carga de jugadores!'" [subtitle]="'Carga un jugador'"></app-header>
+
+<br>
+<div class="container">
+
+    <div class="row ">
+        <!-- <div class="col-md-6">
+            <label for="id" class="form-label">Id:</label>
+            <input type="number" class="form-control" name="id" [(ngModel)]="id">
+        </div> -->
+        <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row ">
+        <div class="col-md-6">
+            <label for="posicion" class="form-label">posicion:</label>
+            <input type="text" class="form-control" name="posicion" [(ngModel)]="posicion">
+        </div>
+        <div class="col-md-6">
+            <label for="dorsal" class="form-label">Dorsal:</label>
+            <input type="number" class="form-control" name="dorsal" [(ngModel)]="dorsal">
+        </div>
+    </div>
+
+<br>
+
+    <div class="row ">
+        <div class="col-md-12">
+            <button type="submit" class="btn bg-primary" *ngIf="!isEdit" (click)="onCreate()">Guardar</button>
+            <button type="submit" class="btn bg-primary" *ngIf="isEdit" (click)="onEdit()">Editar</button>
+            <button type="submit" class="btn bg-primary mx-2" (click)="onCancel()">Cancelar</button>
+        </div>
+    </div>    
+</div>
+

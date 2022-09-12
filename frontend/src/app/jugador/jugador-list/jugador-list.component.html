@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Posicion</th>               
+                <th>Dorsal</th> 
+                <th>Accion</th>                             
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of jugadores">
+                <td> {{x.id}} </td>
+                <td> {{x.nombre}} </td>
+                <td> {{x.posicion}} </td>            
+                <td> {{x.dorsal}} </td>   
+                <td><button class="btn bg-warning" (click)="edit(x.id)">Editar</button></td>                       
+                <td><button class="btn bg-danger" (click)="delete(x.id)">Eliminar</button></td>                       
+            </tr>
+        </tbody>
+    </table> 
+    <button class="btn btn-succes bg-primary" (click)="create()">Crear usuario</button>   
+</div>
